@@ -9,7 +9,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: none;
     -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -42,6 +42,32 @@ html{
   }
 
   &::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+
+body{
+  padding-left: 30rem;
+}
+
+section {
+  padding: 3rem 5%;
+
+  &:nth-child(even){
+    background: $light-bg;
+  }
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  color: $white;
+  background: $black;
+  font-size: 1.7rem;
+
+  &:hover{
     background: $green;
   }
 }
@@ -119,3 +145,133 @@ html{
     }
   }
 }
+
+// стили кнопки мобильного меню
+#menu-btn{
+  position: fixed;
+  top: 1rem; right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  background: $green;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10000; 
+  display: none;
+
+  &.fa-times{
+    background: $white;
+    color: $black;
+  }
+}
+
+// Стили Home старт
+.home{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .image{
+    flex: 1 1 40rem;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .content{
+    width: 45rem;
+
+    span{
+      color: $green;
+      font-size: 2rem;
+    }
+
+    h3{
+      color: $black;
+      font-size: 3rem;
+      padding: 2rem 0;
+
+      a{
+        color: $green;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p{
+      font-size: 1.4rem;
+      color: $light-color;
+      padding-bottom: 1rem;
+      line-height: 2;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+// мобильная версия 
+@media (max-width:1200px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width:991px){
+
+  body{
+    padding-left: 0;
+  }
+
+  #menu-btn{
+    display: block;
+  }
+
+  .header{
+    left: -110%;
+
+    &.active{
+      left: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+      width: 35rem;
+    }
+  }
+
+  .home .content h3{
+    font-size: 2.5rem;
+    
+  }
+}
+
+@media (max-width:450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
