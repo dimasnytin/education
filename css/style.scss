@@ -20,7 +20,7 @@ $white: #fff;
 $light-color: #777;
 $yellow: #ff0;
 $light-bg: #f6f6f6;
-$border: 1rem solid #999;
+$border: 1px solid #999;
 
 // mixin шаблон на display
 @mixin grid($val) {
@@ -55,6 +55,24 @@ section {
 
   &:nth-child(even){
     background: $light-bg;
+  }
+}
+
+.heading{
+  text-align: center;
+  font-size: 3rem;
+
+  span{
+    font-size: 2rem;
+    color: $green;
+    text-transform: uppercase;
+  }
+
+  h3{
+    font-size: 3rem;
+    color: $black;
+    text-transform: uppercase;
+    padding-top: 1rem;
   }
 }
 
@@ -211,6 +229,121 @@ section {
     }
   }
 }
+
+// Info стили старт
+.info-container{
+  //@include grid(25rem);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    background: #eee;
+
+  .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    border: $border;
+
+    i{
+      height: 5rem;
+      width: 5rem;
+      line-height: 5rem;
+      font-size: 2rem;
+      border-radius: 50%;
+      background: $green;
+      color: $white;
+      text-align: center;
+    }
+
+    h3{
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+      color: $black;
+    }
+
+    p{
+      font-size: 1.5rem;
+      color: $light-color;
+    }
+  }
+}
+// Сategory style старт
+.category{
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+    .box{
+      text-align: center;
+      padding: 3rem 2rem;  
+      border: $border;
+
+      &:hover i{
+        transform: translateY(-1rem);
+      }
+
+      i{
+        height: 5.5rem;
+        width: 5.5rem;
+        line-height: 5.5rem;
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        color: $white;
+        background: $green;
+        margin-bottom: 1.5rem;
+      }
+
+      h3{
+        font-size: 2rem;
+        color: $black;
+      }
+
+      p{
+        font-size: 1.4rem;
+        color: $light-color;
+        line-height: 2;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
