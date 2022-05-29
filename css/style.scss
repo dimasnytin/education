@@ -351,7 +351,81 @@ section {
     }
   }
 }
+// Coyrses section style старт
+.courses{
 
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+    .box{
+      position: relative;
+      padding: 2rem;
+      border: $border;
+      overflow: hidden;
+      text-align: center;
+
+      &:hover .content{
+        opacity: 1;
+      }
+
+      .image{
+        img{
+          width: 100%;
+        }
+
+        h3{
+          font-size: 2rem;
+          color: $black;
+          font-weight: normal;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .content{
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        background: $green;
+        padding: 2rem;
+        opacity: 0;
+
+        .stars{
+          padding-bottom: 2rem;
+
+          i{
+            font-size: 1.7rem;
+            color: $yellow;
+          }
+        }
+
+        h3{
+          font-size: 2rem;
+          color: $white;
+        }
+
+        p{
+          font-size: 1.4rem;
+          color: $white;
+          padding: 1.5rem 0;
+          line-height: 2;
+        }
+
+        .btn:hover{
+          background: $yellow;
+          color: $black;
+        }
+      }
+    }
+  }
+
+}
 
 
 
