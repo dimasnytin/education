@@ -420,16 +420,21 @@
         </div>
 
         <form action="">
+
             <div class="inputBox">
                 <input type="text" placeholder="name" name="" id="">
                 <input type="email" placeholder="email" name="" id="">
             </div>
+
             <div class="inputBox">
                 <input type="number" placeholder="phone" name="" id="">
                 <input type="text" placeholder="subject" name="" id="">
             </div>
+
             <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+
             <input type="submit" value="send message" class="btn">
+            
         </form>
 
     </div>

@@ -61,6 +61,7 @@ section {
 .heading{
   text-align: center;
   font-size: 3rem;
+  padding-bottom: 2rem;
 
   span{
     font-size: 2rem;
@@ -366,6 +367,7 @@ section {
       overflow: hidden;
       text-align: center;
 
+      // эффект видимости контента при наведении
       &:hover .content{
         opacity: 1;
       }
@@ -383,6 +385,7 @@ section {
         }
       }
 
+      // обратная сторона карточки при наведении
       .content{
         position: absolute;
         top: 0; left: 0;
@@ -394,7 +397,8 @@ section {
         flex-flow: column;
         background: $green;
         padding: 2rem;
-        opacity: 0;
+        // скрываем обратную сторону карточки
+        opacity: 0; 
 
         .stars{
           padding-bottom: 2rem;
@@ -426,8 +430,148 @@ section {
   }
 
 }
+// pricing style старт
+.pricing{
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
 
+    .box{
+      text-align: center;
+      padding: 2rem;
+      border: $border;
+      background: $white;
 
+      h3{
+        font-size: 2rem;
+        color: $black;
+      }
+
+      img{
+        height: 20rem;
+      }
+
+      .amount{
+        font-size: 5rem;
+        color: $black;
+
+        span{
+          font-size: 2.5rem;
+        }
+      }
+
+      .list{
+        padding: 1.5rem 0;
+        text-align: left;
+        p{
+          padding: 1rem 0;
+          font-size: 1.5rem;
+          color: $light-color;
+
+          i{
+            color: $green;
+            padding: 0.5rem;
+
+            &.fa-times{
+              color: rgb(215, 55, 55);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// contact style старт
+.contact{
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .contact-info-container{
+      width: 40rem;
+
+      .box{
+        margin-bottom: 3rem;
+        display: flex;
+        gap: 1.5rem;
+
+        i{
+          height: 5rem;
+          width: 5rem;
+          line-height: 5rem;
+          font-size: 1.5rem;
+          background: $green;
+          color: $white;
+          border-radius: 50%;
+          text-align: center;
+          margin-top: -1rem;
+        }
+
+        h3{
+          font-size: 2rem;
+          color: $black;
+          padding-bottom: 1rem;
+        }
+
+        p{
+          font-size: 1.5rem;
+          color: $light-color;
+          line-height: 2;
+        }
+      }
+
+      .share{
+        padding-top: 1rrem;
+        a{
+          height: 5rem;
+          width: 5rem;
+          line-height: 5rem;
+          font-size: 2rem;
+          background: $black;
+          color: $white;
+          margin-right: 0.1rem;
+          text-align: center;
+
+          &:hover{
+            background: $green;
+          }
+        }
+      }
+    }
+
+    form{
+      flex: 1 1 42rem;
+
+      .inputBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        input{
+          width: 49%;
+        }
+      }
+
+      .inputBox input, textarea{
+        padding: 1.4rem;
+        background: $light-bg;
+        text-transform: none;
+        color: $light-color;
+        margin: 0.7rem 0;
+        font-size: 1.6rem;
+      }
+
+      textarea{
+        width: 100%;
+        resize: none;
+        height: 15rem;
+      }
+    }
+  }
+}
 
 
 
@@ -502,6 +646,10 @@ section {
 @media (max-width:450px) {
   html {
     font-size: 50%;
+  }
+
+  .contact .row form .inputBox input{
+    width: 100%;
   }
 }
 
